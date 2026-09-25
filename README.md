@@ -4,6 +4,10 @@
 
 RepSense AI Gym Coach is a Streamlit-powered fitness companion that uses your camera and MediaPipe pose landmarks to analyze exercise form while you train. It counts repetitions, tracks workout sets, gives live form metrics, stores workout history, and can provide AI voice coaching.
 
+## Live Demo
+
+Try the deployed app: [repsense-ai-gym-coach.streamlit.app](https://repsense-ai-gym-coach.streamlit.app/)
+
 ## What It Does
 
 - Real-time pose detection through the browser camera
