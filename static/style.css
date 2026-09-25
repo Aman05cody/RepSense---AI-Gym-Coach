@@ -1,0 +1,636 @@
+/* =========================================================
+   GLOBAL THEME
+========================================================= */
+
+.stApp {
+  background-color: #0A0D14;
+  color: #fff;
+}
+
+[data-testid="stSidebar"] {
+  background-color: #111520;
+}
+
+/* =========================================================
+   TYPOGRAPHY (SCOPED – safer)
+========================================================= */
+
+.block-container,
+.block-container * {
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.block-container {
+  padding: 42px 3rem 64px !important;
+  max-width: 920px !important;
+}
+
+/* =========================================================
+   LOGIN EXPERIENCE
+========================================================= */
+
+.login-shell {
+  max-width: 760px;
+  margin: 2.5rem auto 0;
+  padding: 2.4rem 2.6rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #171d2b 0%, #101521 66%, #0d121d 100%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.login-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #f4f6fa;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  border-radius: 8px;
+  background: #d8f36b;
+  color: #101521;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.brand-name b { color: #d8f36b; font-weight: 700; }
+
+.brand-status {
+  margin-left: auto;
+  color: #8f9aaa;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.brand-status i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: #d8f36b;
+  box-shadow: 0 0 10px #d8f36b;
+}
+
+.login-hero { padding: 5.2rem 0 4.2rem; }
+
+.login-kicker {
+  margin: 0 0 1.2rem;
+  color: #d8f36b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.login-hero h1 {
+  margin: 0;
+  color: #f7f8fb;
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+.login-hero h1 em { color: #d8f36b; font-style: normal; }
+
+.login-copy {
+  max-width: 27rem;
+  margin: 1.7rem 0 0;
+  color: #aeb7c5;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.login-feature-strip {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #aeb7c5;
+  font-size: 0.78rem;
+}
+
+.login-feature-strip strong {
+  margin-right: 0.4rem;
+  color: #d8f36b;
+  font-size: 0.68rem;
+}
+
+.login-form-heading {
+  max-width: 760px;
+  margin: 2.2rem auto 0.7rem;
+  color: #f7f8fb;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.stApp:has(.login-shell) .stForm {
+  max-width: 760px;
+  margin: 0 auto !important;
+  padding: 1.5rem 1.6rem 1.6rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: #151b28 !important;
+}
+
+.stApp:has(.login-shell) [data-testid="stTextInput"] label p {
+  color: #8f9aaa !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em;
+}
+
+.stApp:has(.login-shell) [data-testid="stTextInput"] input {
+  min-height: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  background: #0d121d !important;
+}
+
+.stApp:has(.login-shell) [data-testid="stFormSubmitButton"] button {
+  min-height: 3rem;
+  margin-top: 0.8rem;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: #d8f36b !important;
+  color: #101521 !important;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.stApp:has(.login-shell) [data-testid="stFormSubmitButton"] button:hover {
+  background: #e5ff83 !important;
+}
+
+@media (max-width: 640px) {
+  .block-container { padding: 20px 1rem 40px !important; }
+  .login-shell { margin-top: 1rem; padding: 1.5rem 1.25rem 1.3rem; }
+  .login-hero { padding: 4rem 0 3rem; }
+  .login-feature-strip { flex-direction: column; gap: 0.65rem; }
+  .brand-status { display: none; }
+  .stApp:has(.login-shell) .stForm { padding: 1.25rem !important; }
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button,
+.stButton button,
+.stDownloadButton button,
+.MuiBox-root button {
+  background-color: #181D2A !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   INPUTS & TEXT ELEMENTS
+========================================================= */
+
+input,
+textarea,
+p,
+li,
+code,
+[data-testid="stSelectbox"] > div > div,
+[data-baseweb="select"] > div,
+[data-baseweb="popover"] ul,
+[data-baseweb="menu"] {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   METRICS
+========================================================= */
+
+[data-testid="stMetric"] {
+  background-color: #181D2A;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.2rem;
+  border-radius: 0;
+}
+
+[data-testid="stMetric"] div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-testid="stMetricValue"] {
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+}
+
+[data-testid="stMetricLabel"] {
+  font-size: 15px !important;
+  opacity: 0.6;
+}
+
+[data-testid="stMetric"] div label p {
+  font-size: 16px !important;
+}
+
+/* =========================================================
+   CONTAINERS / CARDS
+========================================================= */
+
+.stContainer,
+.stExpander,
+.stTabs,
+.stColumns,
+.stPopover,
+.stAlertContainer,
+.stStatusContainer,
+.stMetric,
+.stTable,
+.stDataFrame,
+.stForm,
+.stSelectbox,
+[data-baseweb="select"] > div,
+[data-testid="stForm"],
+[data-testid="stMetric"],
+[data-testid="stNumberInputContainer"],
+[data-testid="stDataFrameColumnMenu"],
+[data-testid="stHeadingWithActionElements"],
+[data-testid="stCaptionContainer"] p,
+[data-testid="stAlertContentInfo"] p,
+[data-testid="stSidebarNavLink"],
+[data-testid="stMarkdownContainer"] h3,
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+div[role="menu"],
+div[role="menuitem"] {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   DATAFRAME FIX
+========================================================= */
+
+.stDataFrame,
+.stDataFrame div,
+.stDataFrameGlideDataEditor {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   INTERACTIVE ELEMENTS
+========================================================= */
+
+.stTextInput,
+.stTextArea,
+.stNumberInput,
+.stSlider,
+.stMultiselect,
+.stRadio,
+.stCheckbox,
+.stToggle,
+.stFileUploader,
+.stColorPicker,
+.stDateInput,
+.stTimeInput,
+.stCameraInput,
+[data-testid="stTextInput"] > div,
+[data-testid="stButton"] button,
+[data-testid="stBaseButton-secondaryFormSubmit"],
+[data-testid="stStatusWidget"] {
+  border-radius: 0 !important;
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   MARKDOWN
+========================================================= */
+
+[data-testid="stMarkdownContainer"] strong {
+  font-family: 'AdobeClean', sans-serif !important;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.stForm {
+  margin-top: 2rem !important;
+  padding: 1.5rem 1rem !important;
+  background-color: #181D2A !important;
+  color: #fff;
+}
+
+/* =========================================================
+   AUTHENTICATED APP THEMES
+========================================================= */
+
+.stApp:has(.app-theme) {
+  --app-canvas: #f1efe9;
+  --app-sidebar: #e4e0d7;
+  --app-surface: #fffdf8;
+  --app-surface-muted: #ebe8e0;
+  --app-border: #d4d0c6;
+  --app-text: #252522;
+  --app-muted: #6f6d65;
+  --app-accent: #e8753d;
+  --app-accent-hover: #d85f2c;
+  --app-accent-ink: #fffaf2;
+  background-color: var(--app-canvas) !important;
+  color: var(--app-text) !important;
+}
+
+.stApp:has(.app-theme-dark) {
+  --app-canvas: #171715;
+  --app-sidebar: #20201d;
+  --app-surface: #252521;
+  --app-surface-muted: #2e2d28;
+  --app-border: #414039;
+  --app-text: #f4f0e7;
+  --app-muted: #aaa59a;
+  --app-accent: #f0a15d;
+  --app-accent-hover: #ffb674;
+  --app-accent-ink: #211b15;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] {
+  background-color: var(--app-sidebar) !important;
+  border-right: 1px solid var(--app-border);
+}
+
+.stApp:has(.app-theme) .block-container,
+.stApp:has(.app-theme) .block-container p,
+.stApp:has(.app-theme) .block-container h1,
+.stApp:has(.app-theme) .block-container h2,
+.stApp:has(.app-theme) .block-container h3,
+.stApp:has(.app-theme) .block-container label,
+.stApp:has(.app-theme) [data-testid="stSidebar"] {
+  color: var(--app-text) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p,
+.stApp:has(.app-theme) [data-testid="stCaptionContainer"] p {
+  color: var(--app-muted) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] label,
+.stApp:has(.app-theme) [data-testid="stSidebar"] label p,
+.stApp:has(.app-theme) [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
+.stApp:has(.app-theme) [data-testid="stSidebar"] [data-testid="stCheckbox"] p {
+  color: var(--app-text) !important;
+}
+
+.stApp:has(.app-theme-light) [data-testid="stSidebar"] input {
+  color: var(--app-text) !important;
+  -webkit-text-fill-color: var(--app-text) !important;
+  background-color: var(--app-surface) !important;
+}
+
+.stApp:has(.app-theme) header[data-testid="stHeader"],
+.stApp:has(.login-shell) header[data-testid="stHeader"] {
+  display: flex !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  pointer-events: none !important;
+}
+
+.stApp:has(.app-theme) header[data-testid="stHeader"] [data-testid="stAppDeployButton"],
+.stApp:has(.login-shell) header[data-testid="stHeader"] [data-testid="stAppDeployButton"],
+.stApp:has(.app-theme) header[data-testid="stHeader"] [data-testid="stToolbarActions"],
+.stApp:has(.login-shell) header[data-testid="stHeader"] [data-testid="stToolbarActions"] {
+  display: none !important;
+}
+
+.stApp:has(.app-theme) header[data-testid="stHeader"] button:not([data-testid="stExpandSidebarButton"]),
+.stApp:has(.login-shell) header[data-testid="stHeader"] button:not([data-testid="stExpandSidebarButton"]) {
+  display: none !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stExpandSidebarButton"],
+.stApp:has(.login-shell) [data-testid="stExpandSidebarButton"] {
+  display: none !important;
+}
+
+.stApp:has([data-testid="stSidebar"][aria-expanded="false"]) [data-testid="stExpandSidebarButton"] {
+  position: fixed !important;
+  top: 0.75rem !important;
+  left: 0.75rem !important;
+  z-index: 30 !important;
+  display: flex !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto !important;
+  border: 1px solid var(--app-border, var(--login-border, #d4d0c6)) !important;
+  border-radius: 8px !important;
+  background: var(--app-surface, var(--login-surface, #fffdf8)) !important;
+  color: var(--app-muted, var(--login-muted, #6f6d65)) !important;
+}
+
+.stApp:has([data-testid="stSidebar"][aria-expanded="false"]) [data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"] {
+  color: var(--app-muted, var(--login-muted, #6f6d65)) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] button[data-testid="stBaseButton-headerNoPadding"] {
+  display: flex !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  margin: 0.5rem 0.5rem 0.5rem auto !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: 1px solid var(--app-border) !important;
+  border-radius: 8px !important;
+  color: var(--app-muted) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] button[data-testid="stBaseButton-headerNoPadding"] [data-testid="stIconMaterial"] {
+  color: var(--app-muted) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] button[data-testid="stBaseButton-headerNoPadding"]:hover {
+  border-color: var(--app-accent) !important;
+  color: var(--app-accent) !important;
+}
+
+.stApp:has(.app-theme) button,
+.stApp:has(.app-theme) .stButton button,
+.stApp:has(.app-theme) .stDownloadButton button {
+  background-color: var(--app-surface) !important;
+  border: 1px solid var(--app-border) !important;
+  color: var(--app-text) !important;
+  border-radius: 8px !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSidebar"] button:hover,
+.stApp:has(.app-theme) .stButton button:hover {
+  border-color: var(--app-accent) !important;
+  color: var(--app-accent) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSelectbox"] > div > div,
+.stApp:has(.app-theme) [data-testid="stNumberInputContainer"],
+.stApp:has(.app-theme) [data-testid="stTextInput"] input,
+.stApp:has(.app-theme) [data-baseweb="select"] > div {
+  background-color: var(--app-surface) !important;
+  border-color: var(--app-border) !important;
+  color: var(--app-text) !important;
+  border-radius: 8px !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSelectbox"] svg {
+  color: var(--app-muted) !important;
+  fill: var(--app-muted) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stSelectbox"] [data-baseweb="select"],
+.stApp:has(.app-theme) [data-testid="stSelectbox"] [data-baseweb="select"] *,
+.stApp:has(.app-theme) [data-testid="stSelectbox"] svg {
+  cursor: pointer !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stToggle"] [role="switch"][aria-checked="true"] {
+  background-color: var(--app-accent) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stMetric"],
+.stApp:has(.app-theme) [data-testid="stForm"] {
+  background-color: var(--app-surface) !important;
+  border: 1px solid var(--app-border) !important;
+  color: var(--app-text) !important;
+  border-radius: 12px !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stMetricLabel"],
+.stApp:has(.app-theme) [data-testid="stMetricValue"] {
+  color: var(--app-text) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stAlertContainer"] {
+  background-color: var(--app-surface-muted) !important;
+  border-color: var(--app-accent) !important;
+  color: var(--app-text) !important;
+}
+
+.stApp:has(.app-theme) hr {
+  border-color: var(--app-border) !important;
+}
+
+.stApp:has(.app-theme) .stAppDeployButton button {
+  background-color: var(--app-surface) !important;
+}
+
+.stApp:has(.app-theme) [data-testid="stDataFrame"] {
+  border: 1px solid var(--app-border);
+  border-radius: 12px !important;
+}
+
+.stApp:has(.app-theme) .app-theme {
+  display: none;
+}
+
+.login-theme {
+  display: none;
+}
+
+.stApp:has(.login-theme-light) {
+  --login-canvas: #f1efe9;
+  --login-surface: #fffdf8;
+  --login-border: #d4d0c6;
+  --login-text: #252522;
+  --login-muted: #6f6d65;
+  --login-accent: #e8753d;
+  background: var(--login-canvas) !important;
+  color: var(--login-text) !important;
+}
+
+.stApp:has(.login-theme-light) .login-shell {
+  border-color: var(--login-border);
+  background: linear-gradient(145deg, #fffdf8 0%, #f4f0e8 100%);
+  box-shadow: 0 24px 70px rgba(54, 48, 38, 0.14);
+}
+
+.stApp:has(.login-theme-light) .login-brand-row,
+.stApp:has(.login-theme-light) .login-hero h1,
+.stApp:has(.login-theme-light) .login-form-heading {
+  color: var(--login-text);
+}
+
+.stApp:has(.login-theme-light) .login-copy,
+.stApp:has(.login-theme-light) .login-feature-strip,
+.stApp:has(.login-theme-light) .brand-status {
+  color: var(--login-muted);
+}
+
+.stApp:has(.login-theme-light) .login-hero h1 em,
+.stApp:has(.login-theme-light) .brand-name b,
+.stApp:has(.login-theme-light) .login-kicker,
+.stApp:has(.login-theme-light) .login-feature-strip strong {
+  color: var(--login-accent);
+}
+
+.stApp:has(.login-theme-light) .login-feature-strip {
+  border-top-color: var(--login-border);
+}
+
+.stApp:has(.login-theme-light) [data-testid="stForm"] {
+  border-color: var(--login-border) !important;
+  background: var(--login-surface) !important;
+}
+
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] label p {
+  color: var(--login-muted) !important;
+}
+
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] input {
+  border-color: var(--login-border) !important;
+  background: var(--login-surface) !important;
+  color: var(--login-text) !important;
+  -webkit-text-fill-color: var(--login-text) !important;
+  caret-color: var(--login-accent) !important;
+}
+
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] input:focus::placeholder {
+  color: transparent !important;
+  opacity: 0 !important;
+}
+
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] > div,
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] [data-baseweb="input"],
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] [data-baseweb="input"] > div,
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] input:focus {
+  background: var(--login-surface) !important;
+  border-color: var(--login-border) !important;
+  color: var(--login-text) !important;
+  -webkit-text-fill-color: var(--login-text) !important;
+}
+
+.stApp:has(.login-theme-light) [data-testid="stTextInput"] [data-baseweb="input"]:focus-within {
+  border-color: var(--login-accent) !important;
+  box-shadow: 0 0 0 1px var(--login-accent) !important;
+}
+
+.stApp:has(.login-shell) [data-testid="InputInstructions"] {
+  display: none !important;
+}
+
+
+@media (max-width: 640px) {
+  .stApp:has(.app-theme) .block-container { padding: 24px 1rem 40px !important; }
+}
